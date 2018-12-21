@@ -1,0 +1,44 @@
+{
+  "name": "giticon",
+  "version": "1.0.0",
+  "description": "Github style identicons",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --display-error-details --display-modules",
+    "watch": "webpack --watch",
+    "test": "jest --verbose=false --config ./jest.config.js",
+    "test:watch": "jest --watch --verbose=false --config ./jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildbreakdo/giticon.git"
+  },
+  "keywords": [
+    "github",
+    "identicon",
+    "avatar",
+    "user avatar",
+    "user identicon"
+  ],
+  "author": "Joshua Robinson",
+  "bugs": {
+    "url": "https://github.com/buildbreakdo/giticon/issues"
+  },
+  "homepage": "https://github.com/buildbreakdo/giticon#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.4",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "terser-webpack-plugin": "^1.1.0",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "react-lib-adler32": "^1.0.1"
+  }
+}
