@@ -10,7 +10,15 @@ npm install giticon --save
 ```
 const giticon = require('giticon');
 
-const svgIdenticon = giticon('John Doe');
+const optionalOverrides = {
+  background: [240, 240, 240, 255],
+  margin:     0.2,
+  size:       40,
+  saturation: 0.7,
+  brightness: 0.5
+};
+
+const svgIdenticon = giticon('John Doe', optionalOverrides);
 
 console.log(svgIdenticon);
 ```
