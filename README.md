@@ -1,4 +1,5 @@
-# Giticon
+# Giticon <img src="https://github.com/buildbreakdo/giticon/blob/master/examples/TwitchPoker.svg" alt="TwitchPoker user avatar identicon" width="40"/>
+
 Github style SVG identicons.
 
 ## Installation
@@ -22,7 +23,6 @@ const svgIdenticon = giticon('TwitchPoker', optionalOverrides);
 
 console.log(svgIdenticon);
 ```
-![TwitchPoker](https://github.com/buildbreakdo/giticon/blob/master/examples/TwitchPoker.svg)
 
 ### Credit
 Giticon is a simplified loose fork of https://github.com/stewartlord/identicon.js/tree/master
