@@ -18,10 +18,11 @@ const optionalOverrides = {
   brightness: 0.5
 };
 
-const svgIdenticon = giticon('John Doe', optionalOverrides);
+const svgIdenticon = giticon('TwitchPoker', optionalOverrides);
 
 console.log(svgIdenticon);
 ```
+[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
 
 ### Credit
 Giticon is a simplified loose fork of https://github.com/stewartlord/identicon.js/tree/master
