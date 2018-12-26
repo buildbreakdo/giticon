@@ -22,7 +22,7 @@ const svgIdenticon = giticon('TwitchPoker', optionalOverrides);
 
 console.log(svgIdenticon);
 ```
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+![TwitchPoker](https://raw.githubusercontent.com/buildbreakdo/giticon/master/examples/TwitchPoker.svg)
 
 ### Credit
 Giticon is a simplified loose fork of https://github.com/stewartlord/identicon.js/tree/master
