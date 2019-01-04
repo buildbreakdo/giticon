@@ -1,6 +1,6 @@
 # Giticon <img src="https://github.com/buildbreakdo/giticon/blob/master/examples/TwitchPoker.svg" alt="TwitchPoker user avatar identicon" width="40"/>
 
-Github style SVG identicons.
+Github style SVG identicons / user-avatars.
 
 ## Installation
 ```
