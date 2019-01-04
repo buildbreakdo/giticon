@@ -7,7 +7,8 @@
     "build": "NODE_ENV=production webpack --display-error-details --display-modules",
     "watch": "webpack --watch",
     "test": "jest --verbose=false --config ./jest.config.js",
-    "test:watch": "jest --watch --verbose=false --config ./jest.config.js"
+    "test:watch": "jest --watch --verbose=false --config ./jest.config.js",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   },
   "dependencies": {
     "babel-plugin-named-asset-import": "^0.2.3",
+    "coveralls": "^3.0.2",
     "react-lib-adler32": "^1.0.1"
   }
 }

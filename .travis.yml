@@ -3,7 +3,6 @@ before_install:
   - "npm install npm -g"
 node_js:
   - "stable"
-  - "6"
   - "8"
   - "10"
 env:
