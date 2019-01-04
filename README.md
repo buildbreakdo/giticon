@@ -8,6 +8,7 @@ Github style SVG identicons / user-avatars. Want to see a live example? See Giti
 ```
 npm install giticon --save
 ```
+[![NPM Stats](https://nodei.co/npm/giticon.png?downloads=true)](https://npmjs.org/package/giticon)
 
 ## Usage
 ```
