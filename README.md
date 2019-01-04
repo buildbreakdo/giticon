@@ -1,4 +1,4 @@
-# Giticon <img src="https://github.com/buildbreakdo/giticon/blob/master/examples/TwitchPoker.svg" alt="TwitchPoker user avatar identicon" width="40"/>
+# <img align="left" src="https://github.com/buildbreakdo/giticon/blob/master/examples/TwitchPoker.svg" alt="TwitchPoker user avatar identicon" width="40"/> Giticon 
 
 Github style SVG identicons / user-avatars. See Giticons live on [pholder.com/imaginary-interiors](https://pholder.com/imaginary-interiors)
 
