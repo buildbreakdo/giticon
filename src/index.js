@@ -86,6 +86,25 @@ function identicon(string, optionOverrides = {}) {
     }
   });
 
+  const rectanglesWithoutBackground = rectangles.filter(rect =>
+    rect.color !== backgroundCssValue
+  );
+
+  const mostGraphicRectangleGroup = (
+    // If all rects are the color of the background
+    // then the identicon is a square block; sometimes this has to be used
+    rectanglesWithoutBackground.length ? rectanglesWithoutBackground : rectangles
+  );
+
+  const draw = mostGraphicRectangleGroup.map((rect, i) => {
+    // Start at point M(x,y)
+    // Draw a (h)orizontal line of width
+    // Then from that point draw a vertical line
+    // Then from that point draw a horizontal line
+    // Then from that point closePath draw a straight line from the current position, to the first point in the path.
+    return `M${rect.x},${rect.y} h${rect.w} v${rect.h} h${0 - rect.h}z`;
+  }).join(' ')
+
   // Input:
   // <rect x="2" y="2" fill="#FFFFFF" width="2" height="2"/>
   // <rect x="2" y="6" fill="#FFFFFF" width="2" height="2"/>
@@ -96,14 +115,7 @@ function identicon(string, optionOverrides = {}) {
   // <path fill="#fff" d="M2,10 h2 v2 h-2z"/>
   // Output:
   // <path fill="#fff" d="M2,2 h2 v2 h-2z M2,6 h2 v2 h-2z M2,10 h2 v2 h-2z"/>
-  return (`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-color: ${backgroundCssValue};" viewBox="0 0 40 40"><path shape-rendering="crispEdges" style="fill: ${foregroundCssValue}; stroke: ${foregroundCssValue}; stroke-width: ${1}; max-width: 100%; max-height: 100%;" d="${rectangles.map((rect, i) => {
-    // Start at point M(x,y)
-    // Draw a (h)orizontal line of width
-    // Then from that point draw a vertical line
-    // Then from that point draw a horizontal line
-    // Then from that point closePath draw a straight line from the current position, to the first point in the path.
-    return `M${rect.x},${rect.y} h${rect.w} v${rect.h} h${0 - rect.h}z`;
-  }).join(' ')}" /></svg>`)
+  return (`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-color: ${backgroundCssValue};" viewBox="0 0 40 40"><path shape-rendering="crispEdges" style="fill: ${foregroundCssValue}; stroke: ${foregroundCssValue}; stroke-width: ${1}; max-width: 100%; max-height: 100%;" d="${draw}" /></svg>`)
 }
 
 function hsl2rgb(h, s, b) {

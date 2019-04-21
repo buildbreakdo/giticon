@@ -25,7 +25,6 @@ test(`'John_-Williams3'`, () => {
 });
 
 test(`ExUmPan`, () => {
-  console.log(giticon('ExUmPan'))
   expect(giticon('ExUmPan').length).toBeGreaterThan(60);
 });
 
