@@ -41,8 +41,7 @@ function identicon(string, optionOverrides = {}) {
   // the first 15 characters of the hash control the pixels (even/odd)
   // they are drawn down the middle first, then mirrored outwards
   let color;
-  const rectangles = [];
-
+  let rectangles = [];
   hash.split('').forEach((char, i) => {
     color = parseInt(hash.charAt(i), 16) % 2 ? backgroundCssValue : foregroundCssValue;
 
@@ -87,16 +86,6 @@ function identicon(string, optionOverrides = {}) {
     }
   });
 
-  rectangles.map(rect => {
-    return {
-      x: Math.floor(rect.x),
-      y: Math.floor(rect.y),
-      w: Math.floor(rect.w),
-      h: Math.floor(rect.h),
-      color: rect.color
-    }
-  })
-
   // Input:
   // <rect x="2" y="2" fill="#FFFFFF" width="2" height="2"/>
   // <rect x="2" y="6" fill="#FFFFFF" width="2" height="2"/>
@@ -107,7 +96,7 @@ function identicon(string, optionOverrides = {}) {
   // <path fill="#fff" d="M2,10 h2 v2 h-2z"/>
   // Output:
   // <path fill="#fff" d="M2,2 h2 v2 h-2z M2,6 h2 v2 h-2z M2,10 h2 v2 h-2z"/>
-  return (`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-color: ${backgroundCssValue};" viewBox="0 0 40 40"><path shape-rendering="crispEdges" style="fill: ${foregroundCssValue}; stroke: ${foregroundCssValue}; strokeWidth: ${1}; max-width: 100%; max-height: 100%;" d="${rectangles.filter(rect => rect.color !== backgroundCssValue).map((rect, i) => {
+  return (`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background-color: ${backgroundCssValue};" viewBox="0 0 40 40"><path shape-rendering="crispEdges" style="fill: ${foregroundCssValue}; stroke: ${foregroundCssValue}; strokeWidth: ${1}; max-width: 100%; max-height: 100%;" d="${rectangles.map((rect, i) => {
     // Start at point M(x,y)
     // Draw a (h)orizontal line of width
     // Then from that point draw a vertical line
