@@ -24,3 +24,8 @@ test(`'John_-Williams3'`, () => {
   expect(giticon('John_-Williams3').length).toBeGreaterThan(60);
 });
 
+test(`ExUmPan`, () => {
+  console.log(giticon('ExUmPan'))
+  expect(giticon('ExUmPan').length).toBeGreaterThan(60);
+});
+
