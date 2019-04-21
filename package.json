@@ -1,6 +1,6 @@
 {
   "name": "giticon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Github style identicons",
   "main": "build/index.js",
   "scripts": {
@@ -29,6 +29,8 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-destructuring": "^7.4.3",
     "@babel/preset-env": "^7.1.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
